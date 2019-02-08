@@ -1,0 +1,27 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "borough": "Manhattan" } },  
+        { "match": { "cuisine": "Italian" } } 
+      ]
+    }
+  },
+  "aggs" : {
+    "resto_agg" : {
+      "terms" : {
+        "field" : "name",
+          "order": {
+            "avg_score" : "desc" 
+          },
+        "size": 1
+      },
+      "aggs": {
+        "avg_score": {
+          "avg": { "field": "grades.score" } 
+        }
+      }
+    }
+  },
+  "size" :0 
+}
