@@ -7,7 +7,7 @@
     }
   },
   "aggs" : {
-    "cuisines" : {
+    "type_cuisine" : {
       "terms": { "field": "cuisine" }
     }
   },
