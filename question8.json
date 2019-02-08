@@ -12,12 +12,12 @@
       "terms" : {
         "field" : "name",
           "order": {
-            "avg_score" : "desc" 
+            "average_score" : "desc" 
           },
         "size": 1
       },
       "aggs": {
-        "avg_score": {
+        "average_score": {
           "avg": { "field": "grades.score" } 
         }
       }
