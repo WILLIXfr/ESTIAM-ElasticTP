@@ -1,0 +1,13 @@
+{
+    "query": {
+        "match": {
+            "address.street": {
+                "query": "8 avenue",
+                "operator": "and"
+            }
+        }
+    },
+    "_source": [ "name"],
+    "size": 100
+}
+
