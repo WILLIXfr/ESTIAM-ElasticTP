@@ -1,0 +1,8 @@
+{
+  "aggs": {
+    "borough": {
+      "terms": { "field": "borough" }
+    }
+  },
+  "size": 0
+}
