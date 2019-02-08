@@ -1,0 +1,14 @@
+{
+ "mappings" : {
+  "_doc" : {  
+   "properties" : {
+    "address.coord" : {
+     "type" : "geo_point"
+    },
+   "borough" : { "type" : "keyword"},
+   "cuisine" : { "type" : "keyword"},
+   "name" : { "type" : "keyword"}
+   }
+  }
+ }
+}
