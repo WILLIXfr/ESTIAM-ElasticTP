@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool": {
+      "must": [ { 
+        "match" : {
+	  "cuisine":  "Hamburgers"
+	}
+      } ],
+      "filter": { 
+        "geo_distance" : {
+          "distance" : "1km",
+          "address.coord" : {
+            "lat" : 40.7348529,
+            "lon" : -73.9897794
+          }
+        }
+      }
+    }
+  },
+  "_source": ["address.zipcode", "address.street", "address.building", "borough"]
+}
